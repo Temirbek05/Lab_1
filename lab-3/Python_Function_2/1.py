@@ -79,29 +79,23 @@ movies = [
 ]
 
 def above_5_5(movie):
-    """Check if the IMDB score of a movie is above 5.5."""
     return movie["imdb"] > 5.5
 
 def filter_above_5_5(movies):
-    """Return a sublist of movies with an IMDB score above 5.5."""
     return [movie for movie in movies if above_5_5(movie)]
 
 def filter_by_category(movies, category):
-    """Return movies under a specific category."""
     return [movie for movie in movies if movie["category"] == category]
 
 def filter_by_name(movies, name):
-    """Return movies with a specific name."""
     return [movie for movie in movies if movie["name"] == name]
 
 def average_imdb_score(movies):
-    """Compute the average IMDB score of a list of movies."""
     if not movies:
         return 0
     return sum(movie["imdb"] for movie in movies) / len(movies)
 
 def average_imdb_score_by_category(movies, category):
-    """Compute the average IMDB score of movies under a specific category."""
     category_movies = filter_by_category(movies, category)
     return average_imdb_score(category_movies)
 
