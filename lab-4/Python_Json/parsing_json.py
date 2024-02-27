@@ -11,8 +11,8 @@ topology/pod-1/node-201/sys/phys-[eth1/34]                              inherit 
 topology/pod-1/node-201/sys/phys-[eth1/35]                              inherit   9150 
 """
 import json
-with open('sample-data.json') as f:
-    data = json.load(f)
+import1 = open('Python_Json/sample-data.json')
+data = json.load(import1)
 
 interface=data['imdata']
 print("Interface Status")
