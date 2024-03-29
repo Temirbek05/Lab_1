@@ -32,5 +32,5 @@ while running:
 
     pygame.draw.circle(screen, 'Red', (x, y), 25)
     pygame.display.update()
-    clock.tick(45)        
+    clock.tick(25)        
 pygame.quit()
